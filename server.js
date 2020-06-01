@@ -51,4 +51,13 @@ app.post('/login',function(req,res){
 
 })
 
+app.get('/areaById/:areaId', function(req, res){
+    console.log(req.params.areaId)
+    res.json({
+        success: true,
+        message: "retrieved an area given an ID",
+        areaId: req.params.areaId
+    })
+})
+
 app.listen(8000,function(){console.log('server is listening')})
